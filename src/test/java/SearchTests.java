@@ -8,7 +8,10 @@ import static com.codeborne.selenide.Selenide.open;
 public class SearchTests {
     @Test
     void successfulSearchTest() {
+        //комментарий 1
         Configuration.pageLoadStrategy = "eager";
+
+        //комментарий 2
         open("https://www.google.com/");
         $("[name=q]").setValue("selenide").pressEnter();
         $("[id=search]").shouldHave(text("https://ru.selenide.org"));
